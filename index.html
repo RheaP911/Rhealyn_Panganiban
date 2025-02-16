@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfoiio</title>
+    <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+</head>
+
+<body onload="openSection(event, 'homepage')">
+    <header>
+        <div class="logo">
+            <button class="tablinks" onclick="openSection(event, 'homepage')">
+                <img src="/resources/logo.svg" width="50px" alt="">
+                <p>Rhealyn Panganiban</p>
+            </button>
+        </div>
+        <div class="nav">
+            <ul>
+                <li>
+                    <button class="tablinks" onclick="openSection(event, 'about')">About</button>
+                </li>
+                <li>
+                    <button class="tablinks" onclick="openSection(event, 'portfolio')">Portfolio</button>
+                </li>
+                <li>
+                    <button class="tablinks" onclick="openSection(event, 'contact')">Contact</button>
+                </li>
+                <li class="socials" id="socials">
+                    <i class='bx bxl-facebook facebook-icon'></i>
+                    <i class='bx bxl-linkedin-square linked-icon'></i>
+                    <i class='bx bxs-envelope email-icon'></i>
+                </li>
+            </ul>
+        </div>
+        <input type="checkbox" id="check">
+        <label for="check" class="checkBtn">
+            <i class='bx bx-menu menu-icon'></i>
+            <i class='bx bx-x close-icon'></i>
+        </label>
+    </header>
+    <main>
+        <div class="container">
+            <div class="main-tab">
+                <div id="homepage" class="tabcontent" style="display: block;">
+                    <p>This is the <span>homepage</span>.</p>
+                </div>
+                <div id="about" class="tabcontent">
+                    <div class="about-main-page">
+                        <div class="about-me-text">
+                            <h1>about.</h1>
+                            <h4>I am a Junior Developer based in Batangas, Philippines</h4>
+                            <p>I believe a great website is more than just code—it should 
+                                be both functional and visually appealing. I enjoy 
+                                creating dynamic, responsive sites that look good 
+                                and work well.</p>
+                        </div>
+                        <img src="/resources/my-photo.png"  alt="">
+                    </div>
+                    <div class="internship"></div>
+                    <div class="education"></div>
+                </div>
+                <div id="portfolio" class="tabcontent">
+                    <p>This is the <span>portfolio</span> section.</p>
+                </div>
+                <div id="contact" class="tabcontent">
+                    <p>This is the <span>contact</span> section.</p>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+
+    </footer>
+    <script src="script.js"></script>
+</body>
+
+</html>
