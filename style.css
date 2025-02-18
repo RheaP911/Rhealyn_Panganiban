@@ -4,7 +4,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap');
 /* Allura */
 @import url('https://fonts.googleapis.com/css2?family=Allura&display=swap');
-
+/* 
+@font-face {
+    font-family: Hello_Radea;
+    src: url(/resources/font/Hello\ Radea.otf);
+} */
 
 * {
     margin: 0;
@@ -15,18 +19,24 @@
 
 :root {
     --white: #f0f1ff;
+    --dirty-white: #ebebf3;
     --black: #000;
     --dark-gray: #4e4949;
     --gray: #7a7373;
     --pink: #fca5f1;
     --purple: #cdb5ff;
 
-    /* --button-gradient: linear-gradient(135deg, #f30497 30%, #ff0852 100%); */
+    --gradient: linear-gradient(45deg, #fca5f1, #cdb5ff);
+
+    --facebook: #0864ff;
+    --linkedin: #0d64c5;
+    --instagram: linear-gradient(45deg, #fcb458 15%, #ed6043 25%, #f2203e 45%, #cd337f 60%, #8943b5 80%, #5b4dd2 100%);
+    --twitter: #01a2f5;
 
     --poppins: 'Poppins', serif;
     --jost: 'Jost', sans-serif;
     --allura: 'Allura', serif;
-
+    /* --radea: 'Hello_Radea', serif; */
 
 }
 
@@ -37,6 +47,8 @@ body {
     background: var(--white);
     font-family: var(--jost);
     border: 1px solid blue;
+    /* overflow-x: hidden; */
+
 }
 
 header {
@@ -44,7 +56,8 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 10%;
+    padding: 0 12%;
+    /* background: var(--dirty-white); */
     /* border: 1px solid yellow; */
 }
 
@@ -70,6 +83,7 @@ header {
     /* justify-content: center; */
     align-items: center;
 }
+
 .logo button {
     display: flex;
     align-items: center;
@@ -122,12 +136,23 @@ header {
     transition: 0.5s;
 }
 
-.nav ul li button:hover::after,
 .nav ul li button.active::after {
     width: 100%;
 }
 
+.nav ul li button:hover::after {
+    width: 100%;
+}
 
+/* Reset active button's underline when hovering any button */
+.nav ul li button:hover .nav ul li button.active::after {
+    width: 0%;
+}
+
+/* Keep active button's underline when nothing is hovered */
+.nav ul li button:not(:hover) .nav ul li button.active::after {
+    width: 100%;
+}
 
 
 .nav ul li:hover:not(:last-child) {
@@ -152,19 +177,6 @@ header {
     /* border: 1px solid yellow; */
 }
 
-.tabcontent p {
-    text-align: center;
-    font-size: 5rem;
-    padding: 15rem 0;
-    font-weight: 600;
-}
-
-p span {
-    background-image: linear-gradient(35deg, var(--pink), var(--purple));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-
-}
 
 .socials {
     display: flex;
@@ -175,7 +187,27 @@ p span {
     /* border: 1px solid yellow; */
 }
 
-.socials i {
+.socials-div a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    padding: 0.5rem;
+    width: 3rem;
+    height: 3rem;
+}
+
+.socials .socials-div a:hover {
+    background-image: var(--gradient);
+    transition: 0.4s;
+}
+
+.socials-div a {
+    text-decoration: none;
+    color: var(--black);
+}
+
+.socials a i {
     font-size: 2rem;
     text-shadow: 0 4px 8px 0 rgba(243, 4, 151, 0.2),
         0 6px 20px 0 rgba(243, 4, 151, 0.19),
@@ -184,16 +216,17 @@ p span {
     /* border: 1px solid blue; */
 }
 
-.socials i:hover {
-    color: var(--purple);
-    transition: 0.3s;
+.socials .socials-div:hover a i {
+    font-size: 1.7rem;
+    color: white;
+
 }
 
 /* ------------------ MAIN ----------------- */
 
 .container {
     width: 100%;
-    height: fit-content; 
+    height: fit-content;
     /* border: 1px solid blue; */
     position: relative;
 }
@@ -209,10 +242,12 @@ p span {
     position: absolute;
     z-index: 0;
 }
+
 .circle {
     border-radius: 50%;
     position: absolute;
 }
+
 .small {
     width: clamp(2rem, 4.5rem, 5rem);
     height: clamp(2rem, 4.5rem, 5rem);
@@ -221,6 +256,7 @@ p span {
     transform: translate(200%, 300%);
     background-image: linear-gradient(135deg, var(--purple), var(--pink));
 }
+
 .large {
     width: clamp(6rem, 28rem, 45rem);
     height: clamp(6rem, 28rem, 45rem);
@@ -233,8 +269,7 @@ p span {
 .main-tab {
     width: inherit;
     height: inherit;
-    padding: 0 10%;
-    border: 1px solid blue;
+    /* border: 1px solid blue; */
 
 }
 
@@ -251,36 +286,47 @@ p span {
 
 /* ---------------- ABOUT ----------- */
 
-.about-main-page {
+.main-page {
     width: 100%;
     height: fit-content;
-    padding: 2rem 0 0 0;
+    padding: 2rem 12% 0 12%;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
+    
+    /* border: 1px solid blue; */
 }
-.about-me-text {
+.section {
+    border-bottom: 0.5px solid rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 6px 0 rgba(0, 0, 0, 0.50),
+                0 6px 8px 0 rgba(0, 0, 0, 0.40),
+                0 8px 10px 0 rgba(0, 0, 0, 0.35);
+}
+.main-page-text {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    width: fit-content;
+    width: 45%;
     height: auto;
     align-items: left;
     /* border: 1px solid blue; */
 }
 
-.about-me-text h1 {
+.main-page-text h1 {
     font-size: 12rem;
     font-family: var(--allura);
     line-height: 8rem;
+    /* font-weight: 300; */
 }
-.about-me-text h4 {
-    font-size: 2.2rem;
+
+.main-page-text h4 {
+    font-size: 2.12rem;
     font-weight: 300;
     color: var(--dark-gray);
     line-height: 3rem;
 }
-.about-me-text p {
+
+.main-page-text p {
     font-size: 1.45rem;
     font-family: var(--poppins);
     font-weight: 200;
@@ -289,12 +335,154 @@ p span {
     padding-bottom: 0;
 }
 
-.about-main-page img {
-    width: 45rem;
+.main-page img {
+    width: 34.35rem;
+    /* border: 1px solid blue; */
+}
+
+/* --------------- PORTFOLIO ------------------ */
+
+
+.portfolio-sec h4 {
+    padding-top: 6rem;
+}
+
+.portfolio-sec p {
+    padding-top: 0.8rem;
+}
+
+.featured-works {
+    width: 100%;
+    height: fit-content;
+    display: grid;
+    gap: 1.5rem;
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+    padding-top: 6rem;
+    padding-inline: 12%;
+    background: var(--dirty-white);
+    /* border: 1px solid blue; */
+}
+
+.featured-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: left;
+    min-width: fit-content;
+    width: 320px;
+    height: fit-content;
+    border-radius: 15px;
+    background: var(--white);
+    padding: 0.8rem;
+    gap: 0.5rem;
+    box-shadow: 0 2px 4px 0 rgba(211, 211, 211, 0.30),
+                0 2px 6px 0 rgba(211, 211, 211, 0.25),
+                0 3px 8px 0 rgba(211, 211, 211, 0.15);
+}
+
+.featured-photo img {
+    border-radius: 10px;
+
+}
+.featured-details {
+    padding-left: 1rem;
+}
+.featured-details h4 {
+    font-weight: 300;
+    font-size: 1.2rem;
+    line-height: 2.5rem;
+    text-align: left;
+}
+
+/* ---------------- CONTACT ------------------- */
+
+.contacts {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: fit-content;
+    margin-top: 5rem;
+    /* border: 1px solid blue; */
+}
+
+.socials-part {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: left;
+    width: 100%;
     /* border: 1px solid blue; */
 
 }
 
+.socials-part .socials-div {
+    display: flex;
+    justify-content: left;
+    align-items: left;
+}
+
+.socials-part .socials-div a {
+    gap: 1.5rem;
+    width: unset;
+    height: unset;
+    border-radius: 0;
+    /* border: 1px solid blue; */
+}
+
+.socials-div a .icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.8rem;
+    color: var(--white);
+    width: 3.5rem;
+    height: 3.5rem;
+    padding: 0.5rem;
+    border-radius: 50%;
+}
+
+.socials-part .socials-div a p {
+    font-size: 1.3rem;
+    font-weight: 500;
+    padding: 0;
+}
+
+.twitter {
+    background: var(--twitter);
+}
+
+.facebook {
+    background: var(--facebook);
+}
+
+.linkedin {
+    background: var(--linkedin);
+}
+
+.instagram {
+    background-image: var(--instagram);
+}
+
+.twitter-text {
+    color: var(--twitter);
+}
+
+.facebook-text {
+    color: var(--facebook);
+}
+
+.linkedin-text {
+    color: var(--linkedin);
+}
+
+.instagram-text {
+    background: var(--instagram);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.
 /* ------------ BREAKPOINTS --------------- */
 
 @media (max-width: 1536px) {
