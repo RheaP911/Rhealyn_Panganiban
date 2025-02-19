@@ -11,205 +11,230 @@
 </head>
 
 <body onload="openSection(event, 'homepage')">
-    <header>
-        <div class="logo">
-            <button class="tablinks" onclick="openSection(event, 'homepage')">
-                <img src="/resources/logo.svg" width="50px" alt="">
-                <p>Rhealyn Panganiban</p>
-            </button>
-        </div>
-        <div class="nav">
-            <ul>
-                <li>
-                    <button class="tablinks" onclick="openSection(event, 'about')">About</button>
-                </li>
-                <li>
-                    <button class="tablinks" onclick="openSection(event, 'portfolio')">Portfolio</button>
-                </li>
-                <li>
-                    <button class="tablinks" onclick="openSection(event, 'contact')">Contact</button>
-                </li>
-                <li class="socials" id="socials">
-                    <div class="socials-div">
-                        <a href=""><i class='bx bxl-twitter '></i></a>
-                    </div>
-                    <div class="socials-div">
-                        <a href=""><i class='bx bxl-facebook-circle '></i></a>
-                    </div>
-                    <div class="socials-div">
-                        <a href=""><i class='bx bxl-linkedin-square '></i></a>
-                    </div>
-                    <div class="socials-div">
-                        <a href=""><i class='bx bxl-instagram-alt'></i></i></a>
-                    </div>
-                </li>
-            </ul>
-        </div>
-        <input type="checkbox" id="check">
-        <label for="check" class="checkBtn">
-            <i class='bx bx-menu menu-icon'></i>
-            <i class='bx bx-x close-icon'></i>
-        </label>
-    </header>
-    <main>
-        <div class="container">
-            <div class="main-tab">
-                <div id="homepage" class="tabcontent" style="display: block;">
-                    <p>This is the <span>homepage</span>.</p>
-                </div>
-                <div id="about" class="tabcontent">
-                    <div class="about-section main-page section">
-                        <div class="about-sec main-page-text">
-                            <h1>about.</h1>
-                            <h4>I am a Junior Developer based in Batangas, Philippines</h4>
-                            <p>I believe a great website is more than just code—it should
-                                be both functional and visually appealing. I enjoy
-                                creating dynamic, responsive sites that look good
-                                and work well.</p>
+    <div class="main-container">
+        <header>
+            <div class="logo">
+                <button class="tablinks" onclick="openSection(event, 'homepage')">
+                    <img src="/resources/logo.svg" width="50px" alt="">
+                    <p>Rhealyn Panganiban</p>
+                </button>
+            </div>
+            <nav class="nav">
+                <ul>
+                    <li>
+                        <button class="tablinks" onclick="openSection(event, 'about')">About</button>
+                    </li>
+                    <li>
+                        <button class="tablinks" onclick="openSection(event, 'portfolio')">Portfolio</button>
+                    </li>
+                    <li>
+                        <button class="tablinks" onclick="openSection(event, 'contact')">Contact</button>
+                    </li>
+                    <li class="socials" id="socials">
+                        <div class="socials-div">
+                            <a href=""><i class='bx bxl-twitter twitter-nav'></i></a>
                         </div>
-                        <img src="/resources/about-photo.png" alt="">
-                    </div>
-                    <div class="internship"></div>
-                    <div class="education"></div>
-                </div>
-                <div id="portfolio" class="tabcontent">
-                    <div class="portfolio-section main-page section">
-                        <div class="portfolio-sec main-page-text">
-                            <h1>portfolio.</h1>
-                            <h4>Checkout some of my latest works.</h4>
-                            <p>I've worked on projects that are practical, playful, and
-                                everything in between—blending creativity with clean,
-                                interactive design.</p>
+                        <div class="socials-div">
+                            <a href=""><i class='bx bxl-facebook-circle facebook-nav'></i></a>
                         </div>
-                        <img src="/resources/about-photo.png" alt="">
+                        <div class="socials-div">
+                            <a href=""><i class='bx bxl-linkedin-square linkedin-nav'></i></a>
+                        </div>
+                        <div class="socials-div">
+                            <a href=""><i class='bx bxl-instagram-alt instagram-nav'></i></i></a>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+            <input type="checkbox" id="check">
+            <label for="check" class="checkBtn">
+                <i class='bx bx-menu menu-icon'></i>
+                <i class='bx bx-x close-icon'></i>
+            </label>
+        </header>
+        <main>
+            <div class="container">
+                <div class="main-tab">
+                    <div id="homepage" class="tabcontent" style="display: block;">
+                        <p>This is the <span>homepage</span>.</p>
                     </div>
-                    <div class="featured-works section">
-                        <div class="featured-card">
-                            <div class="featured-photo">
-                                <img src="/resources/portfolio/project-1.png" width="100%" alt="">
+                    <div id="about" class="tabcontent">
+                        <div class="about-section main-page">
+                            <div class="about-sec main-page-text">
+                                <h1>about.</h1>
+                                <h4>I am a Junior Developer based in Batangas, Philippines</h4>
+                                <p>I believe a great website is more than just code—it should
+                                    be both functional and visually appealing. I enjoy
+                                    creating dynamic, responsive sites that look good
+                                    and work well.</p>
                             </div>
-                            <div class="featured-details">
-                                <h4>Weather Forecast</h4>
-                                <div class="featured-techs">
-                                    <i class='bx bxl-html5'></i>
-                                    <i class='bx bxl-css3' ></i>
-                                    <i class='bx bxl-javascript' ></i>
+                            <img src="/resources/about-photo.png" alt="">
+                        </div>
+                        <div class="internship section"></div>
+                        <div class="education section"></div>
+                    </div>
+                    <div id="portfolio" class="tabcontent">
+                        <div class="portfolio-container">
+                            <div class="portfolio-section main-page">
+                                <div class="portfolio-sec main-page-text">
+                                    <h1>portfolio.</h1>
+                                    <h4>Checkout some of my latest works.</h4>
+                                    <p>I've worked on projects that are practical, playful, and
+                                        everything in between—blending creativity with clean,
+                                        interactive design.</p>
                                 </div>
+                                <img src="/resources/about-photo.png" alt="">
                             </div>
-                        </div>
-                        <div class="featured-card">
-                            <div class="featured-photo">
-                                <img src="/resources/portfolio/project-2.png" width="100%" alt="">
-                            </div>
-                            <div class="featured-details">
-                                <h4>Weather Forecast</h4>
-                                <div class="featured-techs">
-                                    <i class='bx bxl-html5'></i>
-                                    <i class='bx bxl-css3' ></i>
-                                    <i class='bx bxl-javascript' ></i>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="featured-card">
-                            <div class="featured-photo">
-                                <img src="/resources/portfolio/project-3.png" width="100%" alt="">
-                            </div>
-                            <div class="featured-details">
-                                <h4>Weather Forecast</h4>
-                                <div class="featured-techs">
-                                    <i class='bx bxl-html5'></i>
-                                    <i class='bx bxl-css3' ></i>
-                                    <i class='bx bxl-javascript' ></i>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="featured-card">
-                            <div class="featured-photo">
-                                <img src="/resources/portfolio/project-4.png" width="100%" alt="">
-                            </div>
-                            <div class="featured-details">
-                                <h4>Weather Forecast</h4>
-                                <div class="featured-techs">
-                                    <i class='bx bxl-html5'></i>
-                                    <i class='bx bxl-css3' ></i>
-                                    <i class='bx bxl-javascript' ></i>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="featured-card">
-                            <div class="featured-photo">
-                                <img src="/resources/portfolio/project-5.png" width="100%" alt="">
-                            </div>
-                            <div class="featured-details">
-                                <h4>Weather Forecast</h4>
-                                <div class="featured-techs">
-                                    <i class='bx bxl-html5'></i>
-                                    <i class='bx bxl-css3' ></i>
-                                    <i class='bx bxl-javascript' ></i>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="featured-card">
-                            <div class="featured-photo">
-                                <img src="/resources/portfolio/project-6.png" width="100%" alt="">
-                            </div>
-                            <div class="featured-details">
-                                <h4>Weather Forecast</h4>
-                                <div class="featured-techs">
-                                    <i class='bx bxl-html5'></i>
-                                    <i class='bx bxl-css3' ></i>
-                                    <i class='bx bxl-javascript' ></i>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div id="contact" class="tabcontent">
-                    <div class="contact-section main-page">
-                        <div class="contact-sec main-page-text">
-                            <h1>contact.</h1>
-                            <h4>Reach out to me on social media or drop me an email.</h4>
-                            <div class="contact-sec contacts">
-                                <div class="socials-part">
-                                    <div class="socials-div">
-                                        <a href="">
-                                            <div class="twitter icon"><i class='bx bxl-twitter '></i></div>
-                                            <p class="twitter-text">Twitter</p>
-                                        </a>
+                            <div class="featured-works section">
+                                <div class="featured-card">
+                                    <div class="featured-photo">
+                                        <img src="/resources/portfolio/project-1.png" width="100%" alt="">
                                     </div>
-                                    <div class="socials-div">
-                                        <a href="">
-                                            <div class="facebook icon"><i class='bx bxl-facebook-circle '></i></div>
-                                            <p class="facebook-text">Facebook</p>
-                                        </a>
+                                    <div class="featured-details">
+                                        <h4>Weather Forecast</h4>
+                                        <div class="featured-techs">
+                                            <i class='bx bxl-html5'></i>
+                                            <i class='bx bxl-css3'></i>
+                                            <i class='bx bxl-javascript'></i>
+                                        </div>
                                     </div>
                                 </div>
-                                <div class="socials-part">
-                                    <div class="socials-div">
-                                        <a href="">
-                                            <div class="linkedin icon"><i class='bx bxl-linkedin-square '></i></div>
-                                            <p class="linkedin-text">Linkedin</p>
-                                        </a>
+                                <div class="featured-card">
+                                    <div class="featured-photo">
+                                        <img src="/resources/portfolio/project-2.png" width="100%" alt="">
                                     </div>
-                                    <div class="socials-div">
-                                        <a href="">
-                                            <div class="instagram icon"> <i class='bx bxl-instagram-alt '></i> </div>
-                                            <p class="instagram-text">Instagram</p>
-                                        </a>
+                                    <div class="featured-details">
+                                        <h4>Color Generator</h4>
+                                        <div class="featured-techs">
+                                            <i class='bx bxl-html5'></i>
+                                            <i class='bx bxl-css3'></i>
+                                            <i class='bx bxl-javascript'></i>
+                                        </div>
                                     </div>
                                 </div>
+                                <div class="featured-card">
+                                    <div class="featured-photo">
+                                        <img src="/resources/portfolio/project-3.png" width="100%" alt="">
+                                    </div>
+                                    <div class="featured-details">
+                                        <h4>Basic Calculator</h4>
+                                        <div class="featured-techs">
+                                            <i class='bx bxl-html5'></i>
+                                            <i class='bx bxl-css3'></i>
+                                            <i class='bx bxl-javascript'></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="featured-card">
+                                    <div class="featured-photo">
+                                        <img src="/resources/portfolio/project-4.png" width="100%" alt="">
+                                    </div>
+                                    <div class="featured-details">
+                                        <h4>Inside Out Characters</h4>
+                                        <div class="featured-techs">
+                                            <i class='bx bxl-html5'></i>
+                                            <i class='bx bxl-css3'></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="featured-card">
+                                    <div class="featured-photo">
+                                        <img src="/resources/portfolio/project-5.png" width="100%" alt="">
+                                    </div>
+                                    <div class="featured-details">
+                                        <h4>Valentine's Dau Website</h4>
+                                        <div class="featured-techs">
+                                            <i class='bx bxl-html5'></i>
+                                            <i class='bx bxl-css3'></i>
+                                            <i class='bx bxl-javascript'></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="featured-card">
+                                    <div class="featured-photo">
+                                        <img src="/resources/portfolio/project-6.png" width="100%" alt="">
+                                    </div>
+                                    <div class="featured-details">
+                                        <h4>Have You Ever Game</h4>
+                                        <div class="featured-techs">
+                                            <i class='bx bxl-html5'></i>
+                                            <i class='bx bxl-css3'></i>
+                                            <i class='bx bxl-javascript'></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="contact" class="tabcontent">
+                        <div class="contact-section main-page">
+                            <div class="contact-sec main-page-text">
+                                <h1>contact.</h1>
+                                <h4>Reach out to me on social media or drop me an email.</h4>
+                                <div class="contacts">
+                                    <div class="socials-part">
+                                        <div class="socials-div">
+                                            <a href="">
+                                                <div class="twitter icon"><i class='bx bxl-twitter '></i></div>
+                                                <p class="twitter-text">Twitter</p>
+                                            </a>
+                                        </div>
+                                        <div class="socials-div">
+                                            <a href="">
+                                                <div class="facebook icon"><i class='bx bxl-facebook-circle '></i></div>
+                                                <p class="facebook-text">Facebook</p>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="socials-part">
+                                        <div class="socials-div">
+                                            <a href="">
+                                                <div class="linkedin icon"><i class='bx bxl-linkedin-square '></i></div>
+                                                <p class="linkedin-text">Linkedin</p>
+                                            </a>
+                                        </div>
+                                        <div class="socials-div">
+                                            <a href="">
+                                                <div class="instagram icon"> <i class='bx bxl-instagram-alt '></i>
+                                                </div>
+                                                <p class="instagram-text">Instagram</p>
+                                            </a>
+                                        </div>
+                                    </div>
 
+                                </div>
                             </div>
+                            <img src="/resources/about-photo.png" alt="">
                         </div>
-                        <img src="/resources/about-photo.png" alt="">
                     </div>
                 </div>
             </div>
-        </div>
-    </main>
-    <footer>
+        </main>
+        <footer>
+            <div class="footer-container">
+                <div class="copyright">
+                    <p>&copy;2025</p>
+                    <p>|</p>
+                    <p> Rhealyn Panganiban</p>
+                </div>
+                <div class="footer-nav">
+                    <ul>
+                        <li>
+                            <button class="tablinks" onclick="openSection(event, 'about')">About</button>
+                        </li>
+                        <li>
+                            <button class="tablinks" onclick="openSection(event, 'portfolio')">Portfolio</button>
+                        </li>
+                        <li>
+                            <button class="tablinks" onclick="openSection(event, 'contact')">Contact</button>
+                        </li>
+                    </ul>
+                </div>
+            </div>
 
-    </footer>
+        </footer>
+    </div>
+
     <script src="script.js"></script>
 </body>
 

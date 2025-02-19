@@ -1,13 +1,11 @@
-// On-load
+
+const menuIcon = document.querySelector(".menu-icon");
+const closeIcon = document.querySelector(".close-icon");
+const nav = document.querySelector(".nav");
 
 
 // Open nav
 document.addEventListener("DOMContentLoaded", () => {
-    const menuIcon = document.querySelector(".menu-icon");
-    const closeIcon = document.querySelector(".close-icon");
-    const nav = document.querySelector(".nav");
-    const contactText = document.querySelector(".contact-text");
-    const socialsIcon = document.querySelector("#socials")
 
     menuIcon.addEventListener("click", () => {
         nav.classList.toggle("active");
@@ -15,18 +13,18 @@ document.addEventListener("DOMContentLoaded", () => {
         if (nav.classList.contains("active")) {
             menuIcon.style.display = "none";
             closeIcon.style.display = "block";
-            contactText.style.display = "none";
         } else {
             menuIcon.style.display = "block";
             closeIcon.style.display = "none";
-            contactText.style.display = "block";
+            nav.classList.remove("active");
+
         }
     });
 
     closeIcon.addEventListener("click", () => {
         nav.classList.remove("active");
         menuIcon.style.display = "block";
-        closeIcon.classList.toggle("hidden");
+        closeIcon.style.display = "none";
     });
 
 
@@ -45,4 +43,18 @@ function openSection(evt, sectionName) {
     }
     document.getElementById(sectionName).style.display = "block";
     evt.currentTarget.className += " active";
+
+
 }
+
+//Active After
+document.querySelectorAll('.nav ul li button').forEach(button => {
+    button.addEventListener('click', () => {
+        document.querySelectorAll('.nav ul li button').forEach(btn => btn.classList.remove('active'));
+        button.classList.add('active');
+
+        nav.classList.remove("active");
+        menuIcon.style.display = "block";
+        closeIcon.style.display = "none";
+    });
+});
