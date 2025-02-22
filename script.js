@@ -1,4 +1,3 @@
-
 const menuIcon = document.querySelector(".menu-icon");
 const closeIcon = document.querySelector(".close-icon");
 const nav = document.querySelector(".nav");
@@ -58,3 +57,52 @@ document.querySelectorAll('.nav ul li button').forEach(button => {
         closeIcon.style.display = "none";
     });
 });
+
+
+// Select elements
+const submitBtn = document.querySelector('.submit-button');
+const statusDiv = document.querySelector('.email-status');
+const statusMsg = document.querySelector('#responseMessage');
+const form = document.querySelector('form');
+const nameInput = document.querySelector(input[name='name']);
+const emailInput = document.querySelector(input[name='email']);
+const messageInput = document.querySelector(textarea[name='message']);
+const nameError = document.querySelector('.name-error');
+const emailError = document.querySelector('.email-error');
+const messageError = document.querySelector('.message-error');
+
+
+form.addEventListener("submit", (event) => {
+    let isValid = true;
+
+    if (nameInput.value.trim() === "") {
+        isValid = false;
+        nameError.style.visibility = "visible";
+    } else {
+        nameError.style.visibility = "hidden";
+    }
+
+    if (emailInput.value.trim() === "") {
+        isValid = false;
+        emailError.style.visibility = "visible";
+    } else {
+        emailError.style.visibility = "hidden";
+    }
+
+    if (messageInput.value.trim() === "") {
+        isValid = false;
+        messageError.style.visibility = "visible";
+    } else {
+        messageError.style.visibility = "hidden";
+    }
+
+    if (!isValid) {
+        event.preventDefault(); 
+        statusMsg.textContent = "Please fill in all fields.";
+        statusDiv.style.border = "1px solid rgba(224, 67, 67, 0.795)";
+        statusDiv.style.background = "rgb(248, 239, 239)";
+        statusMsg.style.color = "rgba(224, 67, 67, 0.795)";
+        statusDiv.style.visibility = "visible";
+    }
+});
+

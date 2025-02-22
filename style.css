@@ -43,6 +43,10 @@
 
 }
 
+html {
+    font-size: 90%;
+}
+
 body {
     /* font-family: 'Poppins', serif; */
     color: var(--black);
@@ -767,23 +771,26 @@ form {
 form h1 {
     font-weight: 300;
     font-size: 2.5rem;
-    margin-bottom: 1.5rem;
+    margin-bottom: 1.8rem;
 }
 .form-left label,
 .form-right label {
     font-size: 1.05rem;
     letter-spacing: 0.05rem;
-    line-height: 2rem;
+    margin-bottom: 0.35rem;
     font-weight: 300;
     font-family: var(--poppins);
+}
+.email-label {
+    /* margin-top: -0.5rem; */
 }
 .form-left input {
     height: 3.25rem;
     border-radius: 10px;
-    margin-bottom: 1.35rem;
+    margin-bottom: 1rem;
 }
 .form-right textarea {
-    height: 16.45rem;
+    height: 15.6rem;
     border-radius: 10px;
 }
 form input,
@@ -798,6 +805,7 @@ form textarea {
 }
 form textarea {
     padding: 0.8rem 1.1rem;
+
 }
 .button-container {
     display: flex;
@@ -823,7 +831,36 @@ form button:hover {
 }
 
 .error-notice {
-    /* visibility: hidden; */
+    display: none;
+    margin-top: 0.25rem;
+    margin-bottom: 0.5rem;
+    font-family: var(--poppins);
+    font-size: 0.9rem;
+    color: rgb(199, 79, 79);
+}
+
+.email-status {
+    visibility: hidden;
+    width: 100%;
+    height: fit-content;
+    margin-top: 1.8rem;
+    /* padding: 1rem; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    border: 1px solid rgba(69, 148, 69, 0.795);
+    background: rgb(212, 247, 212);
+
+}
+#responseMessage {
+    font-size: 1rem;
+    font-family: var(--poppins);
+    padding: 1rem;
+    color: rgba(69, 148, 69, 0.795);
+    /* width: 100%; */
+    text-align: center;
+
 }
 
 
@@ -1209,7 +1246,9 @@ footer {
     form h1 {
         font-size: 2rem;
     }
-
+    .email-status {
+        margin-top: 3rem;
+    }
 }
 
 @media (max-width: 360px) {
@@ -1266,5 +1305,8 @@ footer {
     
     form button {
         width: 100%;
+    }
+    .email-status {
+        margin-top: 5rem;
     }
 }
