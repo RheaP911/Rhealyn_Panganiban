@@ -57,7 +57,19 @@
             <div class="container">
                 <div class="main-tab">
                     <div id="homepage" class="tabcontent" style="display: block;">
+                        <div class="homepage-main">
+                            <div class="homepage-container">
+                                <img src="resources/my-photo.svg" alt="">
+                                <div class="homepage-text">
+                                    <h1>Hello!</h1>
+                                    <p>I'm Rhealyn. I design and build sleek, interactive, and user-friendly web
+                                        experiences. <br> <br> Let’s bring your ideas to life.</p>
+                                </div>
+                            </div>
+
+                        </div>
                         <div class="tech-section section">
+                            <p class="homepage-label label-one">My Coding Toolbox</p>
                             <div class="tech-container">
                                 <div class="html"><i class='bx bxl-html5'></i></div>
                                 <div class="css"><i class='bx bxl-css3'></i></div>
@@ -70,6 +82,55 @@
                                 <div class="github"><i class='bx bxl-github'></i></div>
                             </div>
                         </div>
+                        <div class="featured-work homepage-featured-work section">
+                            <p class="homepage-label ">My featured works</p>
+                            <div class="homepage-featured">
+                                <div class="homepage-featured-card">
+                                    <div class="featured-photo">
+                                        <img src="resources/portfolio/project-1.png" width="100%" alt="">
+                                    </div>
+                                    <div class="card-footer">
+                                        <div class="featured-details">
+                                            <h4>Weather Forecast</h4>
+                                            <p>JavaScript, OpenWeatherMap</p>
+                                        </div>
+                                        <div class="acton-btn">
+                                            <a href=""><i class='bx bx-link-external link-icon'></i></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="homepage-featured-card">
+                                    <div class="featured-photo">
+                                        <img src="resources/portfolio/project-2.png" width="100%" alt="">
+                                    </div>
+                                    <div class="card-footer">
+                                        <div class="featured-details">
+                                            <h4>Color Generator</h4>
+                                            <p>CSS, JavaScript</p>
+                                        </div>
+                                        <div class="acton-btn">
+                                            <a href=""><i class='bx bx-link-external link-icon'></i></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="homepage-featured-card">
+                                    <div class="featured-photo">
+                                        <img src="resources/portfolio/project-3.png" width="100%" alt="">
+                                    </div>
+                                    <div class="card-footer">
+                                        <div class="featured-details">
+                                            <h4>Basic Calculator</h4>
+                                            <p>JavaScript</p>
+                                        </div>
+                                        <div class="acton-btn">
+                                            <a href=""><i class='bx bx-link-external link-icon'></i></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+
                     </div>
                     <div id="about" class="tabcontent">
                         <div class="about-section main-page">
@@ -81,17 +142,32 @@
                                     creating dynamic, responsive sites that look good
                                     and work well.</p>
                             </div>
-                            <img src="resources/about-photo.png" alt="">
+                            <img src="resources/about-photo.png" alt="" class="main-page-img">
                         </div>
 
-                        <div class="internship section"></div>
+                        <div class="internship section">
+                            <div class="internship-photo">
+                                <img src="resources/internship.svg" alt="">
+                            </div>
+                            <div class="internship-text">
+                                <h1>IntegrityNet Solutions and Services</h1>
+                                <h3>Junior Web Developer Intern</h3>
+                                <h4>Start Date - End Date</h4>
+                                <p> I gained experience in web development, working on both front-end and back-end
+                                    projects. I designed and developed systems using
+                                    Go and UAdmin, and integrated APIs, enhancing my skills in full-stack
+                                    development and problem-solving.</p>
+                                <a href="">Read more about my internship</a>
+                            </div>
+
+                        </div>
                         <div class="education section">
                             <div class="education-top">
 
                                 <div class="education-text">
                                     <h1>Batangas State University</h1>
                                     <h3>Bachelor of Science in Computer Engineering</h3>
-                                    <h4>August 2020 - March 2025</h4>
+                                    <h4>Start Date - End Date</h4>
                                     <p>Collaborating on projects, participating in group discussions,
                                         and engaging with peers helped me grow both as a developer
                                         and as a team player, preparing me for real-world challenges in the tech
@@ -138,7 +214,7 @@
                                         everything in between—blending creativity with clean,
                                         interactive design.</p>
                                 </div>
-                                <img src="resources/about-photo.png" alt="">
+                                <img src="resources/portfolio-photo.svg" alt="" class="main-page-img portfolio-img">
                             </div>
                             <div class="featured-works section">
                                 <div class="featured-card">
@@ -268,7 +344,7 @@
                                 </div>
 
                             </div>
-                            <img src="resources/about-photo.png" alt="">
+                            <img src="resources/about-photo.png" alt="" class="main-page-img">
                         </div>
                         <div class="email-sec section">
                             <div class="email-container">
@@ -282,7 +358,8 @@
 
                                             <label for="email" class="email-label">Email</label>
                                             <input type="email" name="email" id="email" required>
-                                            <p class="error-notice email-error">Your email must contain '@' (e.g., name@example.com).</p>
+                                            <p class="error-notice email-error">Your email must contain '@' (e.g.,
+                                                name@example.com).</p>
 
                                             <label for="subject">Subject</label>
                                             <input type="text" name="subject" id="subject" required>
@@ -313,7 +390,9 @@
                 <div class="copyright">
                     <p>&copy;2025</p>
                     <p>|</p>
-                    <p> Rhealyn Panganiban</p>
+                    <a href="" class="my-name">
+                        <p > Rhealyn Panganiban</p>
+                    </a>
                 </div>
                 <div class="footer-nav">
                     <ul>
