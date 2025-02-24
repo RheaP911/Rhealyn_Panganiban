@@ -7,7 +7,7 @@
 
 @font-face {
     font-family: Hello_Radea;
-    src: url(/resources/font/Hello\ Radea.otf);
+    src: url(resources/font/Hello\ Radea.otf);
 }
 
 * {
@@ -495,7 +495,19 @@ nav ul li button.active::after {
     z-index: 10;
     font-family: var(--poppins);
 }
-
+.homepage-text .button-landing  {
+    font-weight: 500;
+    font-size: 1.1rem;
+    /* width: 80%; */
+    align-self: flex-start;
+    z-index: 10;
+    font-family: var(--poppins);
+    /* background-image: var(--gradient); */
+    /* color: #fff;? */
+    /* padding: 0.5rem 1.5rem; */
+    text-decoration: none;
+    border-radius: 25px;
+}
 .tech-section {
     width: 100vw;
     max-width: 1600px;
@@ -507,7 +519,7 @@ nav ul li button.active::after {
     align-items: center;
     padding-top: 3%;
     padding-bottom: 3%;
-    gap: 2rem;
+    gap: 1rem;
     background: var(--dirty-white);
 }
 .tech-container {
@@ -550,6 +562,27 @@ nav ul li button.active::after {
 .github:hover i { 
     color: #181717; 
 }   
+.tooltip {
+    position: relative;
+    display: inline-block;
+}
+.tooltip .toolTipText {
+    visibility: hidden;
+    background-color: var(--white);
+    text-align: center;
+    width: max-content;
+    padding: 0.25rem 1rem;
+    border-radius: 15px;
+    position: absolute;
+    border: 0.5px solid var(--gray);
+    color: var(--dark-gray);
+    /* bottom: -50%;
+    left: 0; */
+    z-index: 1;
+}
+.tooltip:hover .toolTipText {
+    visibility: visible;
+}
 .homepage-featured {
     width: 100%;
     height: fit-content;
@@ -1396,6 +1429,12 @@ footer {
     .homepage-text p {
         font-size: 0.9rem;
     }
+    .tech-section {
+        gap: 1rem;
+    }
+    .tech-container i {
+        font-size: 3rem;
+    }
 
     .copyright {
         width: 100%;
@@ -1492,6 +1531,9 @@ footer {
         width: 35vw;
         height: 35vw;
     }
+    .tech-container i {
+        font-size: 2.5rem;
+    }
     .education-photo {
         padding: 0.25;
         border-radius: 10px;
@@ -1516,6 +1558,12 @@ footer {
 
     .main-page-text h1 {
         font-size: 7.5rem;
+    }
+    .tech-section p {
+        font-size: 1rem;
+    }
+    .tech-container i {
+        font-size: 2rem;
     }
 
     .main-page,
@@ -1580,17 +1628,22 @@ footer {
     .homepage-text h1 {
         font-size: 5rem;
     }
+    .tech-container i {
+        font-size: 1.8rem;
+    }
 
     .portfolio-sec h1 {
         font-size: 5rem;
         margin-bottom: 1rem;
     }
 
-    .featured-works {
+    .featured-works,
+    .homepage-featured {
         grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
     }
 
-    .featured-card {
+    .featured-card,
+    .homepage-featured-card {
         width: 100%;
     }
 
